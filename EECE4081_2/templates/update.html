@@ -1,0 +1,71 @@
+ <body style = "background-color: black;">
+<h1 style = "color: white;">{{title}}</h1>
+<style>
+  body
+{
+	margin: 0;
+	padding: 0;
+	background-color: #000;
+}
+.container
+{
+	positon: absolute;
+	top: 50%;
+	Left: 50%;
+	transform: translate(-50%,-50%);
+	
+}
+.button
+{
+	positon: realative;
+	text-align: center;
+	width: 420px;
+	padding: 12px;
+	font-size: 25px;
+	color: #15f4ee;
+	font-family: poppins;
+	font-weight: 400;
+	border: 5px solid #15f4ee;
+	text-transform: uppercase;
+	letter-spacing: 10px;
+	cursor: pointer;
+	border-radius: 10px;
+	transition: 0.5s;
+}
+.button:hover
+{
+	box-shadow: 0 5px 50px 0 #15f4ee inset, 0 5px 50px 0 #15f4ee,
+				0 5px 50px 0 #15f4ee inset, 0 5px 50px 0 #15f4ee;
+	
+	text-shadow: 0 0 5px #15f4ee, 0 0 5px #15f4ee;
+}
+label {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  padding: 4px;
+  text-transform: uppercase;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+
+a{
+  color: #15f4ee;
+}
+
+
+ </style>
+ 
+<form method="POST" action="/update/{{brokenlaptop.id}}">
+<label for= "brand" >Brand</label>
+<input name="brand" type="text" value = {{brokenlaptop.brand}}>
+<label for= "price">Price</label>
+<input name="price" type="text" value = {{brokenlaptop.price}}>
+<input type="submit" value="Update">
+</form>
+ <div class = "button"><a href="/">back to main</a></div> 
+
+ </body >
+
+
